@@ -1,3 +1,5 @@
+FOR MORE FREE RESOURCES JOIN OUR DISCORD : https://discord.gg/Wp6ZSGwUfm
+
     exports['qt-alert']:Send({
         position = "top-center", -- # 'top-center', 'top-left', 'top-right', 'center-left', 'center-right', 'bottom-center', 'center-middle'
         progressColor = "white",
