@@ -1,0 +1,123 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  @keyframes popUp {
+    0% {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .notification {
+    position: absolute; 
+    display: flex;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px 20px 40px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 50%;
+    max-width: 600px;
+    opacity: 1;
+    animation: popUp 0.8s ease-out;
+    visibility: hidden; 
+    transition: all 0.5s ease; 
+  }
+  
+  .notification.top-center {
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .notification.top-left {
+    top: 10px;
+    left: 10px;
+  }
+  
+  .notification.top-right {
+    top: 10px;
+    right: 10px;
+  }
+  
+  .notification.center-left {
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .notification.center-right {
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+  }
+  
+  .notification.bottom-center {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .notification.center-middle {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  .notification-icon {
+    font-size: 40px;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    color: white;
+    transform: translateY(-80%);
+  }
+  
+  .notification-content {
+    margin-left: 60px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .notification-title {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .notification-text {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  .progress-bar-container {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress-bar {
+    width: 0%;
+    height: 100%;
+    background-color: white;
+    border-radius: 5px;
+    transition: width 1s ease-in-out;
+  }
+  
